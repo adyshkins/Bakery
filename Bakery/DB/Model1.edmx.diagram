@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cbd206633a1476bbfadb342133c9e28" Name="Diagram1">
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Client" Width="1.5" PointX="3" PointY="4.75" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Gender" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Order" Width="1.5" PointX="8.25" PointY="5" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.OrderProd" Width="1.5" PointX="10.5" PointY="5.125" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Position" Width="1.5" PointX="3.75" PointY="1.375" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Product" Width="1.5" PointX="8.25" PointY="1.125" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.ProductType" Width="1.5" PointX="6" PointY="1.625" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Role" Width="1.5" PointX="1.5" PointY="9.625" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.Staff" Width="1.5" PointX="6" PointY="4.5" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="9.125" />
+        <EntityTypeShape EntityType="BakeryKimGurbanovModel.UserAccount" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Client_Gender" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Client_UserAccount" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Order_Client" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Staff_Gender" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Order_Staff" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_OrderProd_Order" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_OrderProd_Product" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Staff_Position" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Product_ProductType" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_UserAccount_Role" />
+        <AssociationConnector Association="BakeryKimGurbanovModel.FK_Staff_UserAccount" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
