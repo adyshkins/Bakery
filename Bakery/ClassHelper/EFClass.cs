@@ -11,3 +11,5 @@ namespace Bakery.ClassHelper
        public static DB.Entities Context { get; } = new DB.Entities();
     }
 }
+
+/////
