@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bakery.ClassHelper
 {
-    internal class EFClass
+    public class EFClass
     {
        public static DB.Entities Context { get; } = new DB.Entities();
     }

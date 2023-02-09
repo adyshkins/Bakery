@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:Bakery.Windows"
         mc:Ignorable="d"
         Title="AuthWindow" 
-        Height="600"
-        Width="400">
+        Height="550"
+        Width="400"
+        WindowStartupLocation="CenterScreen">
     <Grid>
 
 
@@ -67,7 +68,11 @@
 
             </Button>
 
-
+            <TextBlock Text="Нет аккаунта? Регистрация"
+                       Foreground="DarkBlue"
+                       HorizontalAlignment="Center"
+                       Margin="0 100 0 0" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"
+                       />
 
         </StackPanel>
 

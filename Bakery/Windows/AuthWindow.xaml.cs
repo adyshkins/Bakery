@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using static Bakery.ClassHelper.EFClass;
+using Bakery.Windows;
 
 namespace Bakery.Windows
 {
@@ -29,8 +30,8 @@ namespace Bakery.Windows
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
             var userAuth = Context.UserAccount.ToList()
-                .Where(i => i.LoginName == TbLogin.Text &&
-                i.PasswordHash == PbPassword.Password)
+                .Where(i => i.Login == TbLogin.Text &&
+                i.Password == PbPassword.Password)
                 .FirstOrDefault();
 
             if (userAuth != null)
@@ -41,6 +42,14 @@ namespace Bakery.Windows
             {
                 MessageBox.Show("Пользователь не найден");
             }
+        }
+
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            RegistrationUserWindow registrationUserWindow = new RegistrationUserWindow();
+            registrationUserWindow.Show();
+            this.Close();
+
         }
     }
 }
