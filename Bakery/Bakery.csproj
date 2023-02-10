@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\ProductListWindow.xaml.cs">
+      <DependentUpon>ProductListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\RegistrationUserWindow.xaml.cs">
       <DependentUpon>RegistrationUserWindow.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\ProductListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\RegistrationUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -182,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
-    <Folder Include="Res\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\Model1.Context.tt">
@@ -195,6 +201,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\shum.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
