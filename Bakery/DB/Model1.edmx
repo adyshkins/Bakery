@@ -54,9 +54,10 @@
             <PropertyRef Name="IdProd" />
           </Key>
           <Property Name="IdProd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="IdProdType" Type="int" Nullable="false" />
-          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="ProductType">
           <Key>
@@ -488,9 +489,10 @@
             <PropertyRef Name="IdProd" />
           </Key>
           <Property Name="IdProd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="IdProdType" Type="Int32" Nullable="false" />
-          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="OrderProd" Relationship="BakeryKimGurbanovModel.FK_OrderProd_Product" FromRole="Product" ToRole="OrderProd" />
           <NavigationProperty Name="ProductType" Relationship="BakeryKimGurbanovModel.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
         </EntityType>
@@ -765,9 +767,10 @@
           <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="BakeryKimGurbanovModel.Product">
               <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="IdProdType" ColumnName="IdProdType" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="IdProd" ColumnName="IdProd" />
               </MappingFragment>
             </EntityTypeMapping>

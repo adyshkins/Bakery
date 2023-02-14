@@ -21,10 +21,10 @@ namespace Bakery.DB
         }
     
         public int IdProd { get; set; }
-        public string Title { get; set; }
+        public string ProductName { get; set; }
         public int IdProdType { get; set; }
-        public int Quantity { get; set; }
-    
+        public string Description { get; set; }
+        public byte[] Image { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProd> OrderProd { get; set; }
         public virtual ProductType ProductType { get; set; }

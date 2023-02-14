@@ -40,6 +40,17 @@ namespace Bakery.Windows
 
             LvProduct.ItemsSource = products;
         }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditProductWindow addEditProductWindow = new AddEditProductWindow();
+            addEditProductWindow.ShowDialog();
+        }
+
+        private void LvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
 
