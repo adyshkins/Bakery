@@ -47,9 +47,18 @@ namespace Bakery.Windows
             addEditProductWindow.ShowDialog();
         }
 
-        private void LvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void BtnEditProduct_Click(object sender, RoutedEventArgs e)
         {
-            
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            var product = button.DataContext as Product;
+
+            AddEditProductWindow editProductWindow = new AddEditProductWindow(product);
+            editProductWindow.ShowDialog();
         }
     }
 }

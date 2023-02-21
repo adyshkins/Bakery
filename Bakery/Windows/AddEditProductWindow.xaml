@@ -72,18 +72,16 @@
                      Foreground="Black"/>
 
 
-            <Button x:Name="BtnAdd"
+            <Button x:Name="BtnAddEdit"
                     Height="50"
                     FontSize="20"
                     Width="200"
                     Margin="0 40 0 0 " 
                     HorizontalAlignment="Center"
                     Content="Добавить"
-                    Click="BtnAdd_Click">
+                    Click="BtnAddEdit_Click">
 
             </Button>
-
-
 
         </StackPanel>
 
