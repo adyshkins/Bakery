@@ -19,6 +19,21 @@
                        TextAlignment="Center" 
                        Foreground="Black"/>
 
+        <WrapPanel Grid.Row="1" 
+                   VerticalAlignment="Center">
+
+            <TextBlock Text="Поиск:"
+                       FontSize="18"
+                       Margin="20 0 10 0"/>
+
+            <TextBox x:Name="TbSearch"
+                     FontSize="18"
+                     Width="200"
+                     VerticalContentAlignment="Center"  
+                     TextChanged="TbSearch_TextChanged"/>
+
+        </WrapPanel>
+
         <ListView Grid.Row="2"
                   x:Name="LvProduct"
                   Margin="5" 

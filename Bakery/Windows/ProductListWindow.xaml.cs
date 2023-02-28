@@ -36,6 +36,8 @@ namespace Bakery.Windows
             List<Product> products = new List<Product>();
             products = Context.Product.ToList();
 
+
+            products = products.Where(i => i.ProductName.ToLower().Contains(TbSearch.Text.ToLower())).ToList();
             // поиск, сортировка, фильтрация
 
             LvProduct.ItemsSource = products;
@@ -59,6 +61,14 @@ namespace Bakery.Windows
 
             AddEditProductWindow editProductWindow = new AddEditProductWindow(product);
             editProductWindow.ShowDialog();
+
+            GetListProduct();
+
+        }
+
+        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            GetListProduct();
         }
     }
 }

@@ -55,17 +55,21 @@ namespace Bakery.Windows
             TbDisc.Text = product.Description.ToString();
             CMBTypeProduct.SelectedItem = Context.ProductType.Where(i => i.IdProdType == product.IdProdType).FirstOrDefault();
 
-            using (MemoryStream stream = new MemoryStream(product.Image))
+            if (product.Image != null)
             {
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
-                bitmapImage.StreamSource = stream;
-                bitmapImage.EndInit();
-                ImgProduct.Source = bitmapImage;
+                using (MemoryStream stream = new MemoryStream(product.Image))
+                {
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmapImage.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                    bitmapImage.StreamSource = stream;
+                    bitmapImage.EndInit();
+                    ImgProduct.Source = bitmapImage;
 
+                }
             }
+           
 
             isEdit = true;
 
