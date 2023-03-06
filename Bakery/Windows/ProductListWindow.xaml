@@ -31,6 +31,16 @@
                      Width="200"
                      VerticalContentAlignment="Center"  
                      TextChanged="TbSearch_TextChanged"/>
+            
+            <TextBlock Text="Сортировка:"
+                       FontSize="18"
+                       Margin="20 0 10 0"/>
+            
+            <ComboBox x:Name="CmbSort"
+                      FontSize="18"
+                      Width="200" SelectionChanged="CmbSort_SelectionChanged"
+                      />
+
 
         </WrapPanel>
 
