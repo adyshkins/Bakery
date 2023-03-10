@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\CartProductClass.cs" />
     <Compile Include="Windows\AddEditProductWindow.xaml.cs">
       <DependentUpon>AddEditProductWindow.xaml</DependentUpon>
     </Compile>
@@ -208,6 +209,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\icons8-edit-64.png" />
+    <Resource Include="Res\icons8-shopping-cart-30.png" />
     <Resource Include="Res\shum.png" />
   </ItemGroup>
   <ItemGroup>

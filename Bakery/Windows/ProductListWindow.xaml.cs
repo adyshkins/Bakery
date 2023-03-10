@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using static Bakery.ClassHelper.EFClass;
 using Bakery.Windows;
 using Bakery.DB;
+using Bakery.ClassHelper;
 
 
 namespace Bakery.Windows
@@ -79,12 +80,14 @@ namespace Bakery.Windows
             LvProduct.ItemsSource = products;
         }
 
+        // добавление товара
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
             AddEditProductWindow addEditProductWindow = new AddEditProductWindow();
             addEditProductWindow.ShowDialog();
         }
 
+        // редактирование товара
         private void BtnEditProduct_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -110,6 +113,21 @@ namespace Bakery.Windows
         private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GetListProduct();
+        }
+
+
+        // добавление в корзину 
+        private void BtnAddToCartProduct_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            var product = button.DataContext as Product;
+            CartProductClass.products.Add(product);
+            MessageBox.Show($"Товар {product.ProductName} успешно добавлен в корзину");
         }
     }
 }
