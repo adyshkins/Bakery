@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bakery.Windows"
         mc:Ignorable="d"
-        Title="ProductListWindow" Height="800" Width="1200">
+        Title="ProductListWindow" 
+        Height="800" Width="1200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -43,6 +44,15 @@
 
 
         </WrapPanel>
+
+        
+        <Image x:Name="ImgCart"
+               Grid.Row="1"
+               HorizontalAlignment="Right"
+               Width="30"
+               Height="30" 
+               Source="/Res/icons8-shopping-cart-30.png"
+               Margin="30 0" MouseLeftButtonUp="ImgCart_MouseLeftButtonUp"/>
 
         <ListView Grid.Row="2"
                   x:Name="LvProduct"
