@@ -11,11 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 using static Bakery.ClassHelper.EFClass;
 using Bakery.Windows;
 using Bakery.DB;
 using Bakery.ClassHelper;
+using static Bakery.ClassHelper.CartProductClass;
+
 
 namespace Bakery.Windows
 {
@@ -28,7 +31,7 @@ namespace Bakery.Windows
         {
             InitializeComponent();
 
-            LvCartProduct.ItemsSource = ClassHelper.CartProductClass.products;
+            LvCartProduct.ItemsSource = observableCollectionProduct;
         }
 
         
@@ -45,9 +48,9 @@ namespace Bakery.Windows
 
             if (product != null)
             {
-                ClassHelper.CartProductClass.products.Remove(product);
+                observableCollectionProduct.Remove(product);
 
-                LvCartProduct.ItemsSource = ClassHelper.CartProductClass.products;
+                LvCartProduct.ItemsSource = observableCollectionProduct;
 
                 MessageBox.Show(product.ProductName + " Delete");
             }

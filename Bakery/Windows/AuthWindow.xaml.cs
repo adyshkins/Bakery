@@ -36,7 +36,14 @@ namespace Bakery.Windows
 
             if (userAuth != null)
             {
-                MessageBox.Show("OK");
+                // сохраняем пользвателя
+                ClassHelper.UserDataClass.user = userAuth;
+
+                // переход на главную страницу
+
+                MainWindow mainWindow = new MainWindow();                
+                mainWindow.Show();
+                this.Close();
             }
             else
             {

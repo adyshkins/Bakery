@@ -23,6 +23,8 @@ namespace Bakery
         public MainWindow()
         {
             InitializeComponent();
+
+            Tbluser.Text = ClassHelper.UserDataClass.user.Email.ToString();
         }
     }
 }
